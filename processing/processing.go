@@ -102,6 +102,11 @@ func ProcessWord(word string) []string {
 		for _, sym := range symbols {
 			word = strings.Replace(word, sym, "", -1)
 		}
+		
+		if strings.Contains(word, "\t") {
+			word = ""
+		}
+		
 		if word == "" {
 			return []string{}
 		} else {
