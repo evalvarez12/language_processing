@@ -33,4 +33,14 @@ func TestProcessing(t *testing.T) {
 		Process([]byte("this is a 23241")),
 	)
 
+	assert.Equal(
+		[]string{"some", "thing"},
+		Process([]byte("some-thing")),
+	)
+
+	assert.Equal(
+		[]string{"another", "thing"},
+		Process([]byte(" another-thing ! ")),
+	)
+
 }
